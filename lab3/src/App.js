@@ -1,34 +1,29 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { render } from 'react-dom';
-import {Router, Route} from 'react-router';
-// import ContactList from './contact_list'
+import createHistory from 'history/createBrowserHistory'
+import {Router, Route, browserHistory, IndexRoute} from 'react-router';
+import {Root} from './components/Root'
+import {Home} from './components/Home'
+import {User} from './components/User'
+import {ContactList} from './components/ContactList';
+import {Todo} from './components/Todo'
+
+// import {} from './'
 
 class App extends Component {
   render() {
     return(
-      <div className="App">
-        <h1>Hello</h1>
-      </div>
-      // <Router>
-      //   {/* <Route /> */}
-      // </Router>  
+        <Router history={browserHistory}>
+          <Route path={"/"} component={Root}>
+            <IndexRoute component={Home}/>
+            {/* <Route path={"user"} component={User}/> */}
+            <Route path={"home"} component={Home}/>
+            <Route path={"contact_list"} component={ContactList}/>
+            <Route path={"todo"} component={Todo}/>
+          </Route>
+        </Router>
     );
-    // <Router>
-    //   <Route />
-    // </Router>
-    // return (
-    //   <div className="App">
-    //     <header className="App-header">
-    //       <img src={logo} className="App-logo" alt="logo" />
-    //       <h1 className="App-title">Welcome to React</h1>
-    //     </header>
-    //     <p className="App-intro">
-    //       To get started, edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //   </div>
-    // );
   }
 }
 

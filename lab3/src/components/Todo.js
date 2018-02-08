@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Header from './components/header'
 import TodoInput from './components/todoInput';
 import TodoItem from './components/todoItem';
 import TodoPriority from './components/todoPriority';
 
-class App extends Component {
+export class Todo extends Component {
   constructor(props) {
     super(props);
 
@@ -111,4 +110,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Todo;

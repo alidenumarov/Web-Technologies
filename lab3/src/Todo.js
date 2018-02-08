@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './Todo.css';
 import Header from './components/header'
 import TodoInput from './components/todoInput';
 import TodoItem from './components/todoItem';
 import TodoPriority from './components/todoPriority';
 
-class App extends Component {
+export class Todo extends Component {
   constructor(props) {
     super(props);
 
@@ -30,10 +29,6 @@ class App extends Component {
   }
 
   addTodo(todoText) {
-    // let chTodo = this.state.todos.find(function(curElem) {
-    //   return curElem.text === todoText;
-    // });
-    var chTodo;
     var ch = false;
     for(var cur = 0; cur < this.state.todos.length; cur++) {
       if(this.state.todos[cur].text === todoText) {
@@ -82,7 +77,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="Todo">
         <div className="todo-wrapper">
             <Header />
             <TodoInput todoText="" addTodo={this.addTodo}
@@ -92,7 +87,7 @@ class App extends Component {
             <ul>
               {
                 this.state.todos.map((todo) => {
-                  return <TodoItem todo={todo} key={todo.id} 
+                  return <TodoItem todo={todo} key={todo.id}
                             todos={this.state.todos}
                             id={todo.id} 
                             removeTodo={this.removeTodo} 
@@ -111,4 +106,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Todo;

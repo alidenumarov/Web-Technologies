@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  .todoWrapper {
+    margin: 10px -0px 10px 430px;
+    width: 500px;
+    padding-left: 0%;
+    min-height: 30px;
+    /* border: 1px solid rgba(73, 204, 249, 1.0); */
+    /* padding: 20px; */
+    text-align: left;
+  }
+  .button {
+      background-color: rgb(216, 219, 18);
+      border: none;
+      color: rgb(3, 3, 3);
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+  }
+  .input, .inputChange {
+      border: 1px solid rgb(0, 204, 255);
+      border-radius: 4px;
+      width: 350px;
+      height: 30px;
+      background-size: 45px;
+      /* margin-right: 10px; */
+      /* margin-left: 130px; */
+  }
+  .inputChange {
+    margin-left: -450px
+  }
+  .removeTodo, .bnEdit, .bnSave {
+      /* background-color: rgb(243, 67, 67);;
+      border: 3px solid rgb(240, 31, 93);
+      color: rgb(3, 3, 3);
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px; */
+    margin-right: 10px;
+    margin-bottom: 10px;
+    outline: none;
+    box-shadow: none;
+    border-width: 2px;
+    border-radius: 3px;
+    border-style: solid;
+    padding: 8px;
+    background-color: transparent;
+  }
+  .bnSave {
+    margin-left: 10px;
+  }
+  .priority {
+    margin-right: 15px;
+  }
+  .inputPriority {
+    width: 20px;
+    margin-left: 20px
+  }
